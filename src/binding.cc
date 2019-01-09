@@ -4,7 +4,7 @@
 
 using namespace v8;
 
-extern "C" TSLanguage * tree_sitter_hcl();
+extern "C" TSLanguage * tree_sitter_hclrs();
 
 namespace {
 
@@ -17,12 +17,12 @@ void Init(Handle<Object> exports, Handle<Object> module) {
 
   Local<Function> constructor = tpl->GetFunction();
   Local<Object> instance = constructor->NewInstance(Nan::GetCurrentContext()).ToLocalChecked();
-  Nan::SetInternalFieldPointer(instance, 0, tree_sitter_hcl());
+  Nan::SetInternalFieldPointer(instance, 0, tree_sitter_hclrs());
 
-  instance->Set(Nan::New("name").ToLocalChecked(), Nan::New("hcl").ToLocalChecked());
+  instance->Set(Nan::New("name").ToLocalChecked(), Nan::New("hclrs").ToLocalChecked());
   module->Set(Nan::New("exports").ToLocalChecked(), instance);
 }
 
-NODE_MODULE(tree_sitter_hcl, Init)
+NODE_MODULE(tree_sitter_hclrs, Init)
 
 }  // namespace

@@ -1,9 +1,6 @@
 // With help from tree-sitter-javascript
 
 const PREC = {
-	COMMENT: 1, // Prefer comments over regexes
-	STRING: 2,  // In a string, prefer string characters over comments
-
 	COMMA: -1,
 	DECLARATION: 1,
 	ASSIGN: 0,
@@ -19,7 +16,7 @@ const PREC = {
 };
 
 module.exports = grammar({
-	name: 'hcl',
+	name: 'hclrs',
 
 	extras: $ => [
 		$.comment,

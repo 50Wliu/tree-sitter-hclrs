@@ -1,5 +1,5 @@
 {
-  "name": "hcl",
+  "name": "hclrs",
   "rules": {
     "source_file": {
       "type": "REPEAT",

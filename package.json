@@ -1,7 +1,7 @@
 {
-  "name": "tree-sitter-hcl",
+  "name": "tree-sitter-hclrs",
   "version": "0.0.0",
-  "description": "Tree-sitter parser for HCL",
+  "description": "Tree-sitter parser for HCLRS",
   "main": "index.js",
   "scripts": {
     "build": "tree-sitter generate && node-gyp build",
@@ -10,18 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/50Wliu/tree-sitter-hcl.git"
+    "url": "git+https://github.com/50Wliu/tree-sitter-hclrs.git"
   },
   "keywords": [
     "tree-sitter",
-    "hcl"
+    "hclrs"
   ],
   "author": "Winston Liu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/50Wliu/tree-sitter-hcl/issues"
+    "url": "https://github.com/50Wliu/tree-sitter-hclrs/issues"
   },
-  "homepage": "https://github.com/50Wliu/tree-sitter-hcl#readme",
+  "homepage": "https://github.com/50Wliu/tree-sitter-hclrs#readme",
   "dependencies": {
     "nan": "^2.12.1"
   },
