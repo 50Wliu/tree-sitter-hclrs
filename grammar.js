@@ -1,6 +1,5 @@
 // TODO:
 // spread [8..12]
-// mux 'in' operator
 // constants
 
 const PREC = {
@@ -75,6 +74,7 @@ module.exports = grammar({
 		_expression: $ => choice(
 			$.assignment_expression,
 			$.mux_expression,
+      $.in_expression,
 			$.unary_expression,
 			$.binary_expression,
 			$.identifier,
@@ -97,6 +97,14 @@ module.exports = grammar({
 			)),
 			']',
 		),
+
+    in_expression: $ => seq(
+      $._expression,
+      'in',
+      '{',
+      repeatWithDelimiter($.identifier, ','),
+      '}'
+    ),
 
 		unary_expression: $ => choice(...[
 			['!', PREC.NOT],
