@@ -1,3 +1,5 @@
+// With help from tree-sitter-javascript
+
 const PREC = {
 	COMMENT: 1, // Prefer comments over regexes
 	STRING: 2,  // In a string, prefer string characters over comments
@@ -6,7 +8,6 @@ const PREC = {
 	DECLARATION: 1,
 	ASSIGN: 0,
 	MUX: 1,
-	TERNARY: 1,
 	OR: 2,
 	AND: 3,
 	PLUS: 4,
@@ -218,7 +219,6 @@ module.exports = grammar({
 	}
 });
 
-// Taken from tree-sitter-javascript
 function repeatWithDelimiter1 (rule, delimiter) {
 	return seq(rule, repeat(seq(delimiter, rule)));
 }
