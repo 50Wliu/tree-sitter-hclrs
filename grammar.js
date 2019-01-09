@@ -82,6 +82,7 @@ module.exports = grammar({
 		),
 
 		assignment_expression: $ => prec.right(PREC.ASSIGN, seq(
+			optional('const'),
 			$.identifier,
 			'=',
 			$._expression,
