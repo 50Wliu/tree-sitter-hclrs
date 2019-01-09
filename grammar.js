@@ -1,6 +1,3 @@
-// TODO:
-// constants
-
 const PREC = {
 	COMMENT: 1, // Prefer comments over regexes
 	STRING: 2,  // In a string, prefer string characters over comments
@@ -77,8 +74,11 @@ module.exports = grammar({
 			$.slice_expression,
 			$.unary_expression,
 			$.binary_expression,
+			$.predefined_constant,
 			$.identifier,
 			$.number,
+			$.true,
+			$.false,
 		),
 
 		assignment_expression: $ => prec.right(PREC.ASSIGN, seq(
@@ -103,7 +103,7 @@ module.exports = grammar({
 			$._expression,
 			'in',
 			'{',
-			repeatWithDelimiter($.identifier, ','),
+			repeatWithDelimiter($._expression, ','),
 			'}'
 		),
 
@@ -138,6 +138,9 @@ module.exports = grammar({
 			['-', PREC.PLUS],
 			['*', PREC.TIMES],
 			['/', PREC.TIMES],
+			['>>', PREC.TIMES],
+			['>>>', PREC.TIMES],
+			['<<', PREC.TIMES],
 			['&', PREC.AND],
 			['|', PREC.OR],
 			['^', PREC.OR],
@@ -145,7 +148,23 @@ module.exports = grammar({
 			prec.left(precedence, seq($._expression, operator, $._expression))
 		)),
 
-		identifier: $ => /[A-Za-z]\w*/,
+		predefined_constant: $ => choice(
+			'STAT_BUB', 'STAT_AOK', 'STAT_HLT', 'STAT_ADR', 'STAT_INS', 'STAT_PIP',
+			'REG_RAX', 'REG_RCX', 'REG_RDX', 'REG_RBX', 'REG_RSP', 'REG_RBP', 'REG_RSI', 'REG_RDI',
+			'REG_R8', 'REG_R9', 'REG_R10', 'REG_R11', 'REG_R12', 'REG_R13', 'REG_R14', 'REG_NONE',
+			'HALT', 'NOP', 'RRMOVQ', 'IRMOVQ', 'RMMOVQ', 'MRMOVQ', 'OPQ', 'JXX', 'CALL', 'RET',
+			'PUSHQ', 'POPQ', 'CMOVXX', 'RRMOVQ',
+			'ALWAYS', 'LE', 'LT', 'EQ', 'NE', 'GE', 'GT',
+			'ADDQ', 'SUBQ', 'ANDQ', 'XORQ',
+		),
+
+
+		identifier: $ => {
+      const alpha = /[^\s0-9:;`"'@#.,|^&<=>+\-*/\\%?!~()\[\]{}\uFEFF\u2060\u200B\u00A0]/
+      const alpha_numeric = /[^\s:;`"'@#.,|^&<=>+\-*/\\%?!~()\[\]{}\uFEFF\u2060\u200B\u00A0]/
+
+      return token(seq(alpha, repeat(alpha_numeric)))
+    },
 
 		number: $ => {
 			const hex_literal = seq(
@@ -173,6 +192,9 @@ module.exports = grammar({
 				binary_literal,
 			))
 		},
+
+		true: $ => choice('true', 'TRUE'),
+		false: $ => choice('false', 'FALSE'),
 
 		comment: $ => token(choice(
 			/#.*/, // pound comment
