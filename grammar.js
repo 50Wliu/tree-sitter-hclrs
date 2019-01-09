@@ -1,3 +1,8 @@
+// TODO:
+// spread [8..12]
+// mux 'in' operator
+// constants
+
 const PREC = {
   COMMENT: 1, // Prefer comments over regexes
   STRING: 2,  // In a string, prefer string characters over comments
@@ -61,11 +66,9 @@ module.exports = grammar({
 		register_name: $ => /\w\w/,
 
 		_register_expression_statement: $ => seq(
-			$.identifier,
-			':',
-			$.number,
+			$.variable_declarator,
 			'=',
-			/\w+/,
+			$._expression,
 			';',
 		),
 
@@ -124,9 +127,37 @@ module.exports = grammar({
 			prec.left(precedence, seq($._expression, operator, $._expression))
 		)),
 
-		identifier: $ => /\w+/,
+		identifier: $ => /[A-Za-z]\w*/,
 
-		number: $ => /\d+/,
+		number: $ => {
+      const hex_literal = seq(
+        choice('0x', '0X'),
+        /[\da-fA-F]+/
+      )
+
+      const decimal_digits = /\d+/
+
+      const signed_integer = seq(optional(choice('-','+')), decimal_digits)
+      const exponent_part = seq(choice('e', 'E'), signed_integer)
+
+      const binary_literal = seq(choice('0b', '0B'), /[0-1]+/)
+
+      const octal_literal = seq(choice('0o', '0O'), /[0-7]+/)
+
+      const decimal_integer_literal = choice(
+        '0',
+        seq(optional('0'), /[1-9]/, optional(decimal_digits))
+      )
+
+      const decimal_literal = seq(decimal_integer_literal, optional(exponent_part))
+
+      return token(choice(
+        decimal_literal,
+        hex_literal,
+        binary_literal,
+        octal_literal
+      ))
+    },
 
 		comment: $ => token(choice(
 			/#.*/, // pound comment
