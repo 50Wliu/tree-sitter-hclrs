@@ -18,4 +18,3 @@ steps:
 - script: |
     npm test
   displayName: 'npm test'
-  
