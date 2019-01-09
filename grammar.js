@@ -3,22 +3,22 @@
 // constants
 
 const PREC = {
-  COMMENT: 1, // Prefer comments over regexes
-  STRING: 2,  // In a string, prefer string characters over comments
+	COMMENT: 1, // Prefer comments over regexes
+	STRING: 2,  // In a string, prefer string characters over comments
 
-  COMMA: -1,
-  DECLARATION: 1,
-  ASSIGN: 0,
-  MUX: 1,
-  TERNARY: 1,
-  OR: 2,
-  AND: 3,
-  PLUS: 4,
-  REL: 5,
-  TIMES: 6,
-  NOT: 7,
-  NEG: 8,
-  MEMBER: 9,
+	COMMA: -1,
+	DECLARATION: 1,
+	ASSIGN: 0,
+	MUX: 1,
+	TERNARY: 1,
+	OR: 2,
+	AND: 3,
+	PLUS: 4,
+	REL: 5,
+	TIMES: 6,
+	NOT: 7,
+	NEG: 8,
+	MEMBER: 9,
 };
 
 module.exports = grammar({
@@ -74,7 +74,7 @@ module.exports = grammar({
 		_expression: $ => choice(
 			$.assignment_expression,
 			$.mux_expression,
-      $.in_expression,
+			$.in_expression,
 			$.unary_expression,
 			$.binary_expression,
 			$.identifier,
@@ -98,13 +98,13 @@ module.exports = grammar({
 			']',
 		),
 
-    in_expression: $ => seq(
-      $._expression,
-      'in',
-      '{',
-      repeatWithDelimiter($.identifier, ','),
-      '}'
-    ),
+		in_expression: $ => seq(
+			$._expression,
+			'in',
+			'{',
+			repeatWithDelimiter($.identifier, ','),
+			'}'
+		),
 
 		unary_expression: $ => choice(...[
 			['!', PREC.NOT],
@@ -138,34 +138,34 @@ module.exports = grammar({
 		identifier: $ => /[A-Za-z]\w*/,
 
 		number: $ => {
-      const hex_literal = seq(
-        choice('0x', '0X'),
-        /[\da-fA-F]+/
-      )
+			const hex_literal = seq(
+				choice('0x', '0X'),
+				/[\da-fA-F]+/
+			)
 
-      const decimal_digits = /\d+/
+			const decimal_digits = /\d+/
 
-      const signed_integer = seq(optional(choice('-','+')), decimal_digits)
-      const exponent_part = seq(choice('e', 'E'), signed_integer)
+			const signed_integer = seq(optional(choice('-','+')), decimal_digits)
+			const exponent_part = seq(choice('e', 'E'), signed_integer)
 
-      const binary_literal = seq(choice('0b', '0B'), /[0-1]+/)
+			const binary_literal = seq(choice('0b', '0B'), /[0-1]+/)
 
-      const octal_literal = seq(choice('0o', '0O'), /[0-7]+/)
+			const octal_literal = seq(choice('0o', '0O'), /[0-7]+/)
 
-      const decimal_integer_literal = choice(
-        '0',
-        seq(optional('0'), /[1-9]/, optional(decimal_digits))
-      )
+			const decimal_integer_literal = choice(
+				'0',
+				seq(optional('0'), /[1-9]/, optional(decimal_digits))
+			)
 
-      const decimal_literal = seq(decimal_integer_literal, optional(exponent_part))
+			const decimal_literal = seq(decimal_integer_literal, optional(exponent_part))
 
-      return token(choice(
-        decimal_literal,
-        hex_literal,
-        binary_literal,
-        octal_literal
-      ))
-    },
+			return token(choice(
+				decimal_literal,
+				hex_literal,
+				binary_literal,
+				octal_literal
+			))
+		},
 
 		comment: $ => token(choice(
 			/#.*/, // pound comment
@@ -191,9 +191,9 @@ module.exports = grammar({
 
 // Taken from tree-sitter-javascript
 function repeatWithDelimiter1 (rule, delimiter) {
-  return seq(rule, repeat(seq(delimiter, rule)));
+	return seq(rule, repeat(seq(delimiter, rule)));
 }
 
 function repeatWithDelimiter (rule, delimiter) {
-  return optional(repeatWithDelimiter1(rule, delimiter));
+	return optional(repeatWithDelimiter1(rule, delimiter));
 }
