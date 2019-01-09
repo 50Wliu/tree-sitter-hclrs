@@ -1,5 +1,4 @@
 // TODO:
-// spread [8..12]
 // constants
 
 const PREC = {
@@ -75,6 +74,7 @@ module.exports = grammar({
 			$.assignment_expression,
 			$.mux_expression,
 			$.in_expression,
+			$.slice_expression,
 			$.unary_expression,
 			$.binary_expression,
 			$.identifier,
@@ -105,6 +105,15 @@ module.exports = grammar({
 			repeatWithDelimiter($.identifier, ','),
 			'}'
 		),
+
+		slice_expression: $ => prec.right(PREC.MEMBER, seq(
+      $._expression,
+      '[',
+			$._expression,
+			'..',
+			$._expression,
+			']',
+    )),
 
 		unary_expression: $ => choice(...[
 			['!', PREC.NOT],
@@ -150,8 +159,6 @@ module.exports = grammar({
 
 			const binary_literal = seq(choice('0b', '0B'), /[0-1]+/)
 
-			const octal_literal = seq(choice('0o', '0O'), /[0-7]+/)
-
 			const decimal_integer_literal = choice(
 				'0',
 				seq(optional('0'), /[1-9]/, optional(decimal_digits))
@@ -163,7 +170,6 @@ module.exports = grammar({
 				decimal_literal,
 				hex_literal,
 				binary_literal,
-				octal_literal
 			))
 		},
 
