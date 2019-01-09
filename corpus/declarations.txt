@@ -1,0 +1,58 @@
+=====
+Wires
+=====
+wire opcode:8;
+wire icode:4, funccode:4;
+
+----
+
+(source_file
+  (wire_declaration
+    (variable_declarator
+      (identifier)
+      (number)))
+  (wire_declaration
+    (variable_declarator
+      (identifier)
+      (number))
+	(variable_declarator
+	  (identifier)
+	  (number))))
+
+=========
+Registers
+=========
+
+register fF {
+	predPC:64 = 0;
+}
+
+register fD {
+	icode:4 = NOP;
+	ifun:4 = 0;
+	rA:4 = 0;
+}
+
+----
+
+(source_file
+  (register_declaration
+    (register_name)
+    (variable_declarator
+      (identifier)
+      (number))
+    (number))
+  (register_declaration
+    (register_name)
+    (variable_declarator
+      (identifier)
+      (number))
+    (predefined_constant)
+	(variable_declarator
+      (identifier)
+      (number))
+    (number)
+	(variable_declarator
+      (identifier)
+      (number))
+    (number)))

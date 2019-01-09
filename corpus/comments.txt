@@ -1,0 +1,56 @@
+==============
+Pound comments
+==============
+
+# Behold, a comment!
+
+----
+
+(source_file
+  (comment))
+
+=====================
+Double-slash comments
+=====================
+
+// Behold, a comment!
+
+----
+
+(source_file
+  (comment))
+
+==================
+Multiline comments
+==================
+
+/* Behold,
+a
+comment!
+*/
+
+----
+
+(source_file
+  (comment))
+
+=======================
+Comments in source code
+=======================
+
+# This is because it's needed
+four = 4;
+
+yes = /* yikes */ false;
+
+----
+
+(source_file
+  (comment)
+  (assignment_expression
+    (identifier)
+	(number))
+  (assignment_expression
+    (identifier)
+    (comment)
+	(false)))

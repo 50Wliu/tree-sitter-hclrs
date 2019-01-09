@@ -1,0 +1,132 @@
+==================
+Regular assignment
+==================
+
+test = pc + 3;
+
+----
+
+(source_file
+  (assignment_expression
+    (identifier)
+    (binary_expression
+      (identifier)
+      (number))))
+
+================
+Const assignment
+================
+
+const WHEE = 0;
+
+----
+
+(source_file
+  (assignment_expression
+    (identifier)
+	(number)))
+
+==============
+Mux assignment
+==============
+
+e_valE = [
+	E_icode == OPQ && E_ifun == ADDQ: E_valB + E_valA;
+	E_icode == POPQ                 : !stuff;
+	1                               : 0;
+];
+
+----
+
+(source_file
+  (assignment_expression
+    (identifier)
+	(mux_expression
+	  (binary_expression
+	    (binary_expression
+		  (identifier)
+		  (predefined_constant))
+		(binary_expression
+		  (identifier)
+		  (predefined_constant)))
+	  (binary_expression
+	    (identifier)
+		(identifier))
+	  (binary_expression
+	    (identifier)
+		(predefined_constant))
+	  (unary_expression
+	    (identifier))
+	  (number)
+	  (number))))
+
+===========
+in operator
+===========
+
+f_valC = [
+  f_icode in {NOP, HALT}: boom;
+  1                     : 0;
+];
+
+----
+
+(source_file
+  (assignment_expression
+    (identifier)
+	(mux_expression
+	  (in_expression
+	    (identifier)
+		(predefined_constant)
+		(predefined_constant))
+	  (identifier)
+	  (number)
+	  (number))))
+
+======
+Slices
+======
+
+icode = opcode[4..8];
+
+----
+
+(source_file
+  (assignment_expression
+    (identifier)
+	(slice_expression
+	  (identifier)
+	  (number)
+	  (number))))
+
+==========
+True/false
+==========
+
+what = true;
+why = FALSE;
+
+----
+
+(source_file
+  (assignment_expression
+    (identifier)
+	(true))
+  (assignment_expression
+    (identifier)
+	(false)))
+
+=======
+Numbers
+=======
+
+03;
+0b1;
+0XC;
+
+----
+
+(source_file
+  (number)
+  (number)
+  (number))
