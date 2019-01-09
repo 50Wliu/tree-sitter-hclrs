@@ -4,7 +4,9 @@
   "description": "Tree-sitter parser for HCL",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tree-sitter generate && node-gyp build",
+    "test": "tree-sitter test && script/parse-examples",
+    "test-windows": "tree-sitter test && tree-sitter parse examples --quiet --time"
   },
   "repository": {
     "type": "git",
@@ -21,9 +23,9 @@
   },
   "homepage": "https://github.com/50Wliu/tree-sitter-hcl#readme",
   "dependencies": {
-    "nan": "^2.11.1"
+    "nan": "^2.12.1"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.13.10"
+    "tree-sitter-cli": "^0.13.15"
   }
 }
