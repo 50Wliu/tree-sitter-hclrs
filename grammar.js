@@ -68,6 +68,7 @@ module.exports = grammar({
 		_expression: $ => choice(
 			$.assignment_expression,
 			$.mux_expression,
+			$.parenthesized_expression,
 			$.in_expression,
 			$.slice_expression,
 			$.unary_expression,
@@ -95,6 +96,12 @@ module.exports = grammar({
 				';',
 			)),
 			']',
+		),
+
+		parenthesized_expression: $ => seq(
+			'(',
+			$._expression,
+			')',
 		),
 
 		in_expression: $ => seq(

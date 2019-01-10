@@ -26,6 +26,24 @@ const WHEE = 0;
     (identifier)
 	(number)))
 
+===========
+Parentheses
+===========
+
+pie = 2 * (filling + crust);
+
+----
+
+(source_file
+  (assignment_expression
+    (identifier)
+    (binary_expression
+      (number)
+      (parenthesized_expression
+        (binary_expression
+          (identifier)
+          (identifier))))))
+
 ==============
 Mux assignment
 ==============
