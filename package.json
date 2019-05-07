@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/50Wliu/tree-sitter-hclrs#readme",
   "dependencies": {
-    "nan": "^2.12.1"
+    "nan": "^2.13.2"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.13.15"
+    "tree-sitter-cli": "^0.15.1"
   }
 }

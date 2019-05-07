@@ -1,0 +1,445 @@
+[
+  {
+    "type": "assignment_expression",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "binary_expression",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "false",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "in_expression",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "multiline_comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "mux_expression",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "parenthesized_expression",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "predefined_constant",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "register_declaration",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "slice_expression",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "true",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "unary_expression",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "variable_declarator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "wire_declaration",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "wire",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "register",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "register_name",
+    "named": true
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "const",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "in",
+    "named": false
+  },
+  {
+    "type": "..",
+    "named": false
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "~",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "==",
+    "named": false
+  },
+  {
+    "type": "!=",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "&&",
+    "named": false
+  },
+  {
+    "type": "||",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ">>",
+    "named": false
+  },
+  {
+    "type": ">>>",
+    "named": false
+  },
+  {
+    "type": "<<",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "^",
+    "named": false
+  },
+  {
+    "type": "STAT_BUB",
+    "named": false
+  },
+  {
+    "type": "STAT_AOK",
+    "named": false
+  },
+  {
+    "type": "STAT_HLT",
+    "named": false
+  },
+  {
+    "type": "STAT_ADR",
+    "named": false
+  },
+  {
+    "type": "STAT_INS",
+    "named": false
+  },
+  {
+    "type": "STAT_PIP",
+    "named": false
+  },
+  {
+    "type": "REG_RAX",
+    "named": false
+  },
+  {
+    "type": "REG_RCX",
+    "named": false
+  },
+  {
+    "type": "REG_RDX",
+    "named": false
+  },
+  {
+    "type": "REG_RBX",
+    "named": false
+  },
+  {
+    "type": "REG_RSP",
+    "named": false
+  },
+  {
+    "type": "REG_RBP",
+    "named": false
+  },
+  {
+    "type": "REG_RSI",
+    "named": false
+  },
+  {
+    "type": "REG_RDI",
+    "named": false
+  },
+  {
+    "type": "REG_R8",
+    "named": false
+  },
+  {
+    "type": "REG_R9",
+    "named": false
+  },
+  {
+    "type": "REG_R10",
+    "named": false
+  },
+  {
+    "type": "REG_R11",
+    "named": false
+  },
+  {
+    "type": "REG_R12",
+    "named": false
+  },
+  {
+    "type": "REG_R13",
+    "named": false
+  },
+  {
+    "type": "REG_R14",
+    "named": false
+  },
+  {
+    "type": "REG_NONE",
+    "named": false
+  },
+  {
+    "type": "HALT",
+    "named": false
+  },
+  {
+    "type": "NOP",
+    "named": false
+  },
+  {
+    "type": "RRMOVQ",
+    "named": false
+  },
+  {
+    "type": "IRMOVQ",
+    "named": false
+  },
+  {
+    "type": "RMMOVQ",
+    "named": false
+  },
+  {
+    "type": "MRMOVQ",
+    "named": false
+  },
+  {
+    "type": "OPQ",
+    "named": false
+  },
+  {
+    "type": "JXX",
+    "named": false
+  },
+  {
+    "type": "CALL",
+    "named": false
+  },
+  {
+    "type": "RET",
+    "named": false
+  },
+  {
+    "type": "PUSHQ",
+    "named": false
+  },
+  {
+    "type": "POPQ",
+    "named": false
+  },
+  {
+    "type": "CMOVXX",
+    "named": false
+  },
+  {
+    "type": "ALWAYS",
+    "named": false
+  },
+  {
+    "type": "LE",
+    "named": false
+  },
+  {
+    "type": "LT",
+    "named": false
+  },
+  {
+    "type": "EQ",
+    "named": false
+  },
+  {
+    "type": "NE",
+    "named": false
+  },
+  {
+    "type": "GE",
+    "named": false
+  },
+  {
+    "type": "GT",
+    "named": false
+  },
+  {
+    "type": "ADDQ",
+    "named": false
+  },
+  {
+    "type": "SUBQ",
+    "named": false
+  },
+  {
+    "type": "ANDQ",
+    "named": false
+  },
+  {
+    "type": "XORQ",
+    "named": false
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "TRUE",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "FALSE",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "pound_comment",
+    "named": true
+  },
+  {
+    "type": "slash_comment",
+    "named": true
+  },
+  {
+    "type": "/*",
+    "named": false
+  }
+]
