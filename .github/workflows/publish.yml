@@ -39,8 +39,7 @@ jobs:
 
     - name: Push new version to GitHub
       run: |
-        git add package.json package-lock.json
-        git commit -m "Publish ${{ github.event.input.version }}"
+        git push
         git push --tags
 
     - name: npm publish
