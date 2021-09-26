@@ -1,3 +1,3 @@
-# tree-sitter-hclrs [![Build Status](https://dev.azure.com/wliu1402/tree-sitter-hclrs/_apis/build/status/50Wliu.tree-sitter-hclrs?branchName=master)](https://dev.azure.com/wliu1402/tree-sitter-hclrs/_build/latest?definitionId=1?branchName=master)
+# tree-sitter-hclrs [![CI](https://github.com/50Wliu/tree-sitter-hclrs/actions/workflows/ci.yml/badge.svg)](https://github.com/50Wliu/tree-sitter-hclrs/actions/workflows/ci.yml)
 
 A [tree-sitter](https://github.com/tree-sitter/tree-sitter) parser for [HCLRS](https://github.com/woggle/hclrs).
