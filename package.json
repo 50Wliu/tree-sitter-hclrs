@@ -2,7 +2,7 @@
   "name": "tree-sitter-hclrs",
   "version": "0.0.3",
   "description": "Tree-sitter parser for HCLRS",
-  "main": "index.js",
+  "main": "bindings/node",
   "scripts": {
     "build": "tree-sitter generate && node-gyp build",
     "test": "tree-sitter test"
@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/50Wliu/tree-sitter-hclrs#readme",
   "dependencies": {
-    "nan": "^2.13.2"
+    "nan": "^2.15.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.15.1"
+    "tree-sitter-cli": "^0.20.0"
   }
 }

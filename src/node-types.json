@@ -2,12 +2,120 @@
   {
     "type": "assignment_expression",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "in_expression",
+          "named": true
+        },
+        {
+          "type": "mux_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "predefined_constant",
+          "named": true
+        },
+        {
+          "type": "slice_expression",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "binary_expression",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "in_expression",
+          "named": true
+        },
+        {
+          "type": "mux_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "predefined_constant",
+          "named": true
+        },
+        {
+          "type": "slice_expression",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "false",
@@ -17,22 +125,179 @@
   {
     "type": "in_expression",
     "named": true,
-    "fields": {}
-  },
-  {
-    "type": "multiline_comment",
-    "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "in_expression",
+          "named": true
+        },
+        {
+          "type": "mux_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "predefined_constant",
+          "named": true
+        },
+        {
+          "type": "slice_expression",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "mux_expression",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "in_expression",
+          "named": true
+        },
+        {
+          "type": "mux_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "predefined_constant",
+          "named": true
+        },
+        {
+          "type": "slice_expression",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "parenthesized_expression",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "in_expression",
+          "named": true
+        },
+        {
+          "type": "mux_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "predefined_constant",
+          "named": true
+        },
+        {
+          "type": "slice_expression",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "predefined_constant",
@@ -42,17 +307,195 @@
   {
     "type": "register_declaration",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "in_expression",
+          "named": true
+        },
+        {
+          "type": "mux_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "predefined_constant",
+          "named": true
+        },
+        {
+          "type": "register_name",
+          "named": true
+        },
+        {
+          "type": "slice_expression",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable_declarator",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "slice_expression",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "in_expression",
+          "named": true
+        },
+        {
+          "type": "mux_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "predefined_constant",
+          "named": true
+        },
+        {
+          "type": "slice_expression",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "source_file",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "assignment_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "in_expression",
+          "named": true
+        },
+        {
+          "type": "mux_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "predefined_constant",
+          "named": true
+        },
+        {
+          "type": "register_declaration",
+          "named": true
+        },
+        {
+          "type": "slice_expression",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "wire_declaration",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "true",
@@ -62,64 +505,110 @@
   {
     "type": "unary_expression",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "in_expression",
+          "named": true
+        },
+        {
+          "type": "mux_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "predefined_constant",
+          "named": true
+        },
+        {
+          "type": "slice_expression",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "variable_declarator",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "wire_declaration",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "variable_declarator",
+          "named": true
+        }
+      ]
+    }
   },
   {
-    "type": ";",
+    "type": "!",
     "named": false
   },
   {
-    "type": "wire",
+    "type": "!=",
     "named": false
   },
   {
-    "type": ",",
+    "type": "&",
     "named": false
   },
   {
-    "type": ":",
-    "named": false
-  },
-  {
-    "type": "register",
-    "named": false
-  },
-  {
-    "type": "{",
-    "named": false
-  },
-  {
-    "type": "}",
-    "named": false
-  },
-  {
-    "type": "register_name",
-    "named": true
-  },
-  {
-    "type": "=",
-    "named": false
-  },
-  {
-    "type": "const",
-    "named": false
-  },
-  {
-    "type": "[",
-    "named": false
-  },
-  {
-    "type": "]",
+    "type": "&&",
     "named": false
   },
   {
@@ -131,23 +620,7 @@
     "named": false
   },
   {
-    "type": "in",
-    "named": false
-  },
-  {
-    "type": "..",
-    "named": false
-  },
-  {
-    "type": "!",
-    "named": false
-  },
-  {
-    "type": "~",
-    "named": false
-  },
-  {
-    "type": "-",
+    "type": "*",
     "named": false
   },
   {
@@ -155,23 +628,31 @@
     "named": false
   },
   {
-    "type": "==",
+    "type": ",",
     "named": false
   },
   {
-    "type": "!=",
+    "type": "-",
     "named": false
   },
   {
-    "type": ">=",
+    "type": "..",
     "named": false
   },
   {
-    "type": "<=",
+    "type": "/",
     "named": false
   },
   {
-    "type": ">",
+    "type": "/*",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
     "named": false
   },
   {
@@ -179,19 +660,27 @@
     "named": false
   },
   {
-    "type": "&&",
+    "type": "<<",
     "named": false
   },
   {
-    "type": "||",
+    "type": "<=",
     "named": false
   },
   {
-    "type": "*",
+    "type": "=",
     "named": false
   },
   {
-    "type": "/",
+    "type": "==",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
     "named": false
   },
   {
@@ -203,83 +692,87 @@
     "named": false
   },
   {
-    "type": "<<",
+    "type": "ADDQ",
     "named": false
   },
   {
-    "type": "&",
+    "type": "ALWAYS",
     "named": false
   },
   {
-    "type": "|",
+    "type": "ANDQ",
     "named": false
   },
   {
-    "type": "^",
+    "type": "CALL",
     "named": false
   },
   {
-    "type": "STAT_BUB",
+    "type": "CMOVXX",
     "named": false
   },
   {
-    "type": "STAT_AOK",
+    "type": "EQ",
     "named": false
   },
   {
-    "type": "STAT_HLT",
+    "type": "FALSE",
     "named": false
   },
   {
-    "type": "STAT_ADR",
+    "type": "GE",
     "named": false
   },
   {
-    "type": "STAT_INS",
+    "type": "GT",
     "named": false
   },
   {
-    "type": "STAT_PIP",
+    "type": "HALT",
     "named": false
   },
   {
-    "type": "REG_RAX",
+    "type": "IRMOVQ",
     "named": false
   },
   {
-    "type": "REG_RCX",
+    "type": "JXX",
     "named": false
   },
   {
-    "type": "REG_RDX",
+    "type": "LE",
     "named": false
   },
   {
-    "type": "REG_RBX",
+    "type": "LT",
     "named": false
   },
   {
-    "type": "REG_RSP",
+    "type": "MRMOVQ",
     "named": false
   },
   {
-    "type": "REG_RBP",
+    "type": "NE",
     "named": false
   },
   {
-    "type": "REG_RSI",
+    "type": "NOP",
     "named": false
   },
   {
-    "type": "REG_RDI",
+    "type": "OPQ",
     "named": false
   },
   {
-    "type": "REG_R8",
+    "type": "POPQ",
     "named": false
   },
   {
-    "type": "REG_R9",
+    "type": "PUSHQ",
+    "named": false
+  },
+  {
+    "type": "REG_NONE",
     "named": false
   },
   {
@@ -303,43 +796,43 @@
     "named": false
   },
   {
-    "type": "REG_NONE",
+    "type": "REG_R8",
     "named": false
   },
   {
-    "type": "HALT",
+    "type": "REG_R9",
     "named": false
   },
   {
-    "type": "NOP",
+    "type": "REG_RAX",
     "named": false
   },
   {
-    "type": "RRMOVQ",
+    "type": "REG_RBP",
     "named": false
   },
   {
-    "type": "IRMOVQ",
+    "type": "REG_RBX",
     "named": false
   },
   {
-    "type": "RMMOVQ",
+    "type": "REG_RCX",
     "named": false
   },
   {
-    "type": "MRMOVQ",
+    "type": "REG_RDI",
     "named": false
   },
   {
-    "type": "OPQ",
+    "type": "REG_RDX",
     "named": false
   },
   {
-    "type": "JXX",
+    "type": "REG_RSI",
     "named": false
   },
   {
-    "type": "CALL",
+    "type": "REG_RSP",
     "named": false
   },
   {
@@ -347,47 +840,35 @@
     "named": false
   },
   {
-    "type": "PUSHQ",
+    "type": "RMMOVQ",
     "named": false
   },
   {
-    "type": "POPQ",
+    "type": "RRMOVQ",
     "named": false
   },
   {
-    "type": "CMOVXX",
+    "type": "STAT_ADR",
     "named": false
   },
   {
-    "type": "ALWAYS",
+    "type": "STAT_AOK",
     "named": false
   },
   {
-    "type": "LE",
+    "type": "STAT_BUB",
     "named": false
   },
   {
-    "type": "LT",
+    "type": "STAT_HLT",
     "named": false
   },
   {
-    "type": "EQ",
+    "type": "STAT_INS",
     "named": false
   },
   {
-    "type": "NE",
-    "named": false
-  },
-  {
-    "type": "GE",
-    "named": false
-  },
-  {
-    "type": "GT",
-    "named": false
-  },
-  {
-    "type": "ADDQ",
+    "type": "STAT_PIP",
     "named": false
   },
   {
@@ -395,7 +876,7 @@
     "named": false
   },
   {
-    "type": "ANDQ",
+    "type": "TRUE",
     "named": false
   },
   {
@@ -403,27 +884,15 @@
     "named": false
   },
   {
-    "type": "identifier",
-    "named": true
-  },
-  {
-    "type": "number",
-    "named": true
-  },
-  {
-    "type": "true",
+    "type": "[",
     "named": false
   },
   {
-    "type": "TRUE",
+    "type": "]",
     "named": false
   },
   {
-    "type": "false",
-    "named": false
-  },
-  {
-    "type": "FALSE",
+    "type": "^",
     "named": false
   },
   {
@@ -431,15 +900,59 @@
     "named": true
   },
   {
-    "type": "pound_comment",
+    "type": "const",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "identifier",
     "named": true
   },
   {
-    "type": "slash_comment",
+    "type": "in",
+    "named": false
+  },
+  {
+    "type": "number",
     "named": true
   },
   {
-    "type": "/*",
+    "type": "register",
+    "named": false
+  },
+  {
+    "type": "register_name",
+    "named": true
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "wire",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "||",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
     "named": false
   }
 ]
