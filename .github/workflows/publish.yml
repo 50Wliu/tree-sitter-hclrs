@@ -25,8 +25,8 @@ jobs:
     - name: npm run build
       run: npm run build
 
-    - name: npm version ${{ github.events.inputs.version }}
-      run: npm version ${{ github.events.inputs.version }}
+    - name: npm version ${{ github.event.inputs.version }}
+      run: npm version ${{ github.event.inputs.version }}
 
     - name: Set git variables
       run: |
@@ -37,7 +37,7 @@ jobs:
     - name: Push new version to GitHub
       run: |
         git add package.json package-lock.json
-        git commit -m "Publish ${{ github.events.input.version }}"
+        git commit -m "Publish ${{ github.event.input.version }}"
         git push --tags
 
     - name: npm publish
