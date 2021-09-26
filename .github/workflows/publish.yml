@@ -8,7 +8,7 @@ on:
         default: patch
 
 jobs:
-  ci:
+  publish:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
@@ -30,10 +30,9 @@ jobs:
 
     - name: Set git variables
       run: |
-        $token = ConvertTo-SecureString ${{ secrets.GITHUB_TOKEN }} -AsPlainText -Force
-        $user = Invoke-RestMethod -Method Get -Uri https://api.github.com/user -Authentication Bearer -Token $token
-        git config user.name $user.login
-        git config user.email $user.email
+        $user = Invoke-RestMethod -Method Get -Uri https://api.github.com/users/${{ github.actor }}
+        git config user.name $user.name
+        git config user.email ($user.email ?? ${{ github.actor }}@noreply.users.github.com)
 
     - name: Push new version to GitHub
       run: |
