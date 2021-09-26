@@ -11,6 +11,9 @@ jobs:
   publish:
     runs-on: windows-latest
     steps:
+    - name: Disable CRLF conversion
+      run: git config --global core.autocrlf false
+
     - uses: actions/checkout@v2
 
     - uses: actions/setup-node@v2
@@ -24,9 +27,6 @@ jobs:
 
     - name: npm run build
       run: npm run build
-
-    - name: git diff
-      run: git diff
 
     - name: npm version ${{ github.event.inputs.version }}
       run: npm version ${{ github.event.inputs.version }}
